@@ -38,7 +38,7 @@
 });*/
 
 Route::controller(Controller::detect());
-Route::get('acerca', 'home@about');
+Route::get('about', 'home@about');
 
 /*
 |--------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 @layout('layouts/main')
 @section('navigation')
 @parent
-<li><a href="user/logout">Logout</a></li>
+<li><a href="/user/logout">Logout</a></li>
 @endsection
 @section('content')
 <div class="row">
@@ -37,10 +37,11 @@
     </div>
     <div class="span9">
         <h1>Your Photos</h1>
-        @forelse ($photos as $photo)
+        @forelse ($vacations as $vacation)
         <div class="well" style="text-align: center">
-            <img src="http://d2o0t5hpnwv4c1.cloudfront.net/2069_laravel_2/{{ $photo->location }}" alt="{{ $photo->description }}" title="{{ $photo->description }}" />
-            <p>{{ $photo->description }}</p>
+            <p>{{ $vacation->fecha_inicio }}</p>
+            <p>{{ $vacation->fecha_fin }}</p>
+            <p>{{ $vacation->observaciones }}</p>
         </div>
         @empty
         <div class="alert alert-info">
