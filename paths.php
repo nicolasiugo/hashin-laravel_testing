@@ -23,7 +23,8 @@
 
 $environments = array(
 
-	'local' => array('http://localhost*', '*.app'),
+	'local' => array('http://localhost*', '*dev-site.com'),
+  'test' => array(''), // empty is used when called trought artisan
 
 );
 
